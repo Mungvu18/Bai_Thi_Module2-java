@@ -20,6 +20,15 @@ public class ManagerContact {
             System.out.println(contacts);
         }
     }
+    public int edit(String phoneNumber) {
+        int index = -1;
+        for (int i = 0; i < contactsList.size(); i++) {
+            if (contactsList.get(i).getPhoneNumber().equals(phoneNumber)) {
+                index = i;
+            }
+        }
+        return index;
+    }
 
 
 }
