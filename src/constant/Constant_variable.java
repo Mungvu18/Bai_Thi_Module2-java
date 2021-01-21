@@ -1,0 +1,41 @@
+package constant;
+
+public class Constant_variable {
+    public static final String ENTER_AMOUNT_OBJ_ADD = "Nhập số lượng đối tượng muốn thêm";
+    public static final String NONE_OBJ = "";
+    public static final String FIND_NOT_CONTACTS = "Không tìm được danh bạ số điện thoại trên";
+    public static final String ENTER_DATA_OBJ = "Nhập liệu đối tượng";
+    public static final String SUCCESS = "Cập nhật thành công";
+    public static final String Y = "y";
+    public static final String DELETE_OBJ_SUCCESS = "Xóa đối tượng thành công";
+    public static final String NOT_FOUND_OBJ = "Không tìm được danh bạ với số điện thoại trên";
+    public static final String ENTER_CHOICE = "Nhập 1 nếu muốn tìm kiếm theo tên. Nhập 2 nếu muốn tìm kiếm theo số didenj thoại";
+    public static final String ONE = "1";
+    public static final String ENTER_NAME = "Nhập tên";
+    public static final String TWO = "2";
+    public static final String EXIT_PROGRAM = "Thoát chương trình";
+    public static final String APP = "-----CHƯƠNG TRÌNH QUẢN LÝ DANH BẠ -----";
+    public static final String ENTER_FUNCTION = "Chọn chức năng theo số (để tiếp tục)";
+    public static final String SEE_LIST = "1. Xem danh sách";
+    public static final String ADD_NEW = "2. Thêm mới";
+    public static final String EDIT = "3. Cập nhật";
+    public static final String DELETE = "4. Xóa";
+    public static final String FIND = "5. Tìm kiếm";
+    public static final String READ_FILE = "6. Đọc từ file";
+    public static final String WRITE_FILE = "7. Ghi vào file";
+    public static final String EXIT_APP = "8. Thoát chương trình";
+    public static final String ENTER_Y_AGREE_ENTER_NULL_BACCK = "Nhập y nếu bạn đồng ý, để trống ấn Enter nếu muốn quay lại";
+    public static final String NULL = "";
+    public static final String ENTER_PHONE_NUMBER = "Nhập số điện thoại";
+    public static final String ENTER_PHONE_NUMBER_INTO_ZERO_NICE = "Nhập số điện thoại gồm 10 chữ số từ 0 đến 9";
+    public static final String GROUP = "Nhập nhóm của danh bạ";
+    public static final String ENTER_GENGER = "Nhập giới tính";
+    public static final String ENTER_ADDRESS = "Nhập địa chỉ";
+    public static final String ENTER_BIRTHDAY = "Nhập ngày sinh";
+    public static final String ENTER_EMAIL = "Nhập email có định dạng cụm .@gmail.com";
+    public static  final String REGEX_NUMBER_PHONE = "^[0-9]{10}$";
+    public static final String REGEX_EMAIL = "^[A-Za-z0-9]{1,}.@gmail.com$";
+    public static final String NOT_FOUND = "Không tìm được danh bạ với số điện thoại trên";
+    public static final String REGEX = ",";
+    public static final String FILE_NAME = "contacts.csv";
+}

@@ -3,21 +3,20 @@ package controller;
 import model.Contacts;
 
 import java.io.*;
-import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
+import static constant.Constant_variable.*;
+
 public class ManagerContact {
     public List<Contacts> contactsList = new ArrayList<>();
-    public static final String fileName = "contacts.csv";
-
     public List<Contacts> getContactsList() {
         return contactsList;
     }
 
     public void addNew(Contacts contacts) {
         contactsList.add(contacts);
-        System.out.println("Thêm thành công");
+        System.out.println(SUCCESS);
     }
 
     public void showAll() {
@@ -55,7 +54,7 @@ public class ManagerContact {
             }
         }
         if (check == false) {
-            System.out.println("Không tìm được danh bạ với số điện thoại trên");
+            System.out.println(NOT_FOUND);
         }
     }
 
@@ -68,17 +67,17 @@ public class ManagerContact {
             }
         }
         if (check == false) {
-            System.out.println("Không tìm được danh bạ với tên trên");
+            System.out.println(NOT_FOUND);
         }
     }
 
     public void readFile() {
         try {
-            FileReader fileReader = new FileReader(fileName);
+            FileReader fileReader = new FileReader(FILE_NAME);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                String[] strings = line.split(",");
+                String[] strings = line.split(REGEX);
                 Contacts contacts = new Contacts(strings[0], strings[1], strings[2], strings[3], strings[4], strings[5], strings[6]);
                 contactsList.add(contacts);
             }
@@ -92,12 +91,12 @@ public class ManagerContact {
 
     public void writeFile() {
         try {
-            FileWriter fileWriter = new FileWriter(fileName);
+            FileWriter fileWriter = new FileWriter(FILE_NAME);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             String string = "";
             for (Contacts contacts : contactsList) {
-                string = contacts.getPhoneNumber() + "," + contacts.getGroup() + "," + contacts.getName() + "," + contacts.getGender()
-                        + "," + contacts.getAddress() + "," + contacts.getBirthday() + "," + contacts.getEmail() + "\n";
+                string = contacts.getPhoneNumber() + REGEX + contacts.getGroup() + REGEX + contacts.getName() + REGEX + contacts.getGender()
+                        + REGEX + contacts.getAddress() + REGEX + contacts.getBirthday() + REGEX + contacts.getEmail() + "\n";
                 bufferedWriter.write(string);
             }
             bufferedWriter.close();
