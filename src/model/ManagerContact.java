@@ -38,6 +38,20 @@ public class ManagerContact {
         }
         return index;
     }
+    public void findByPhoneNumber(String phoneNumber) {
+        boolean check = false;
+        for (Contacts contacts : contactsList) {
+            if (contacts.getPhoneNumber().contains(phoneNumber)) {
+                System.out.println(contacts);
+                check = true;
+            }
+        }
+        if (check == false) {
+            System.out.println("Không tìm được danh bạ với số điện thoại trên");
+        }
+    }
+
+
 
 
 }
