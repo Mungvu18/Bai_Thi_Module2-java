@@ -78,7 +78,8 @@ public class Contacts {
     @Override
     public String toString() {
         return "Contacts{" +
-                "phoneNumber='" + phoneNumber + '\'' +
+                "name='" + name + '\'' +
+                ",phoneNumber='" + phoneNumber + '\'' +
                 ", group='" + group + '\'' +
                 ", gender='" + gender + '\'' +
                 ", address='" + address + '\'' +

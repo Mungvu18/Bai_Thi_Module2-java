@@ -9,7 +9,7 @@ public class Constant_variable {
     public static final String Y = "y";
     public static final String DELETE_OBJ_SUCCESS = "Xóa đối tượng thành công";
     public static final String NOT_FOUND_OBJ = "Không tìm được danh bạ với số điện thoại trên";
-    public static final String ENTER_CHOICE = "Nhập 1 nếu muốn tìm kiếm theo tên. Nhập 2 nếu muốn tìm kiếm theo số didenj thoại";
+    public static final String ENTER_CHOICE = "Nhập 1 nếu muốn tìm kiếm theo tên. Nhập 2 nếu muốn tìm kiếm theo số điện thoại";
     public static final String ONE = "1";
     public static final String ENTER_NAME = "Nhập tên";
     public static final String TWO = "2";
