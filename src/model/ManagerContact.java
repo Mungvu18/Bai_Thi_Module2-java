@@ -1,5 +1,7 @@
 package model;
 
+import java.io.*;
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,6 +64,25 @@ public class ManagerContact {
             System.out.println("Không tìm được danh bạ với tên trên");
         }
     }
+    public void readFile(){
+        try{
+            FileReader fileReader = new FileReader(fileName);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line;
+            while ((line = bufferedReader.readLine()) != null){
+                String[] strings = line.split(",");
+                Contacts contacts = new Contacts(strings[0],strings[1],strings[2],strings[3],strings[4],strings[5],strings[6]);
+                contactsList.add(contacts);
+            }
+            bufferedReader.close();
+            fileReader.close();
+        }catch (Exception e){
+            System.out.println(e);
+        }
+        showAll();
+    }
+
+}
 
 
 
