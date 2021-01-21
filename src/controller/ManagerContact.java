@@ -1,4 +1,6 @@
-package model;
+package controller;
+
+import model.Contacts;
 
 import java.io.*;
 import java.sql.Connection;
@@ -6,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ManagerContact {
-    List<Contacts> contactsList = new ArrayList<>();
+    public List<Contacts> contactsList = new ArrayList<>();
     public static final String fileName = "contacts.csv";
 
     public List<Contacts> getContactsList() {
