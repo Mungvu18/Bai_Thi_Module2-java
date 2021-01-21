@@ -50,6 +50,18 @@ public class ManagerContact {
             System.out.println("Không tìm được danh bạ với số điện thoại trên");
         }
     }
+    public void findByName(String name) {
+        boolean check = false;
+        for (Contacts contacts : contactsList) {
+            if (contacts.getName().contains(name)) {
+                System.out.println(contacts);
+                check = true;
+            }
+        }
+        if (check == false) {
+            System.out.println("Không tìm được danh bạ với tên trên");
+        }
+    }
 
 
 
