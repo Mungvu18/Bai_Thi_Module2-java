@@ -29,6 +29,15 @@ public class ManagerContact {
         }
         return index;
     }
+    public int remove(String phoneNumber) {
+        int index = -1;
+        for (int i = 0; i < contactsList.size(); i++) {
+            if (contactsList.get(i).getPhoneNumber().equals(phoneNumber)) {
+                index = i;
+            }
+        }
+        return index;
+    }
 
 
 }
