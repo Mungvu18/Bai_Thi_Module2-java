@@ -15,5 +15,11 @@ public class ManagerContact {
         contactsList.add(contacts);
         System.out.println("Thêm thành công");
     }
+    public void showAll() {
+        for (Contacts contacts : contactsList) {
+            System.out.println(contacts);
+        }
+    }
+
 
 }
